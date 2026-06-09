@@ -3,11 +3,13 @@
 // The copyright year updates automatically (one less thing to remember).
 
 import { Link } from "react-router-dom";
+import { FloatingBubbles } from "./FloatingBubbles";
 
 export function Footer() {
   return (
-    <footer className="bg-navy text-cream" role="contentinfo">
-      <div className="mx-auto max-w-7xl px-4 py-12">
+    <footer className="relative overflow-hidden bg-navy text-cream" role="contentinfo">
+      <FloatingBubbles />
+      <div className="relative mx-auto max-w-7xl px-4 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand column — who we are in a nutshell */}
           <div>
@@ -20,7 +22,7 @@ export function Footer() {
           {/* Quick nav links */}
           <div>
             <h2 className="mb-3 text-lg font-bold text-gold">Quick Links</h2>
-            <ul className="space-y-2 text-sm">
+            <ul className="grid grid-cols-2 gap-2 text-sm md:grid-cols-1">
               <li>
                 <Link to="/about" className="text-cream/80 hover:text-gold transition-colors">
                   About
