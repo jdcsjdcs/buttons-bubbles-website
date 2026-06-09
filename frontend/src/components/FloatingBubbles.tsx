@@ -31,7 +31,8 @@ const BUBBLES: Bubble[] = Array.from({ length: 18 }, (_, i) => {
 export function FloatingBubbles() {
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-[20] overflow-hidden mix-blend-soft-light"
+      data-bubbles
+      className="pointer-events-none absolute inset-0 z-0 overflow-hidden mix-blend-soft-light"
       aria-hidden="true" // Decorative only — screen readers don't need to know about bubbles
     >
       {BUBBLES.map((b) => {
